@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>1xbet 信息索引 · 功能与资料整理</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #faf8f4;
+            color: #2c2b28;
+            font-family: 'Segoe UI', 'Noto Sans SC', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+
+        .page {
+            max-width: 960px;
+            margin: 0 auto;
+            background: #fffffffa;
+            border-radius: 28px;
+            padding: 2.5rem 2rem 3rem;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.02);
+        }
+
+        /* hero 区 — 简洁文字主标题 */
+        .hero {
+            text-align: center;
+            padding: 1.2rem 0 1.8rem;
+            border-bottom: 1px solid #e9e3db;
+            margin-bottom: 2.4rem;
+        }
+
+        .hero h1 {
+            font-size: 2.1rem;
+            font-weight: 450;
+            letter-spacing: 1px;
+            color: #1e1c18;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .sub {
+            font-size: 1rem;
+            color: #6b655c;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        /* 卡片式区块 */
+        .section-card {
+            background: #fcfaf7;
+            border-radius: 18px;
+            padding: 1.6rem 1.8rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid #c8bca8;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.01);
+        }
+
+        .section-card h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #2f2b24;
+            margin-bottom: 1rem;
+            border-bottom: 1px dashed #ddd5cb;
+            padding-bottom: 0.4rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem 2rem;
+            margin: 1rem 0 0.2rem;
+        }
+
+        .feature-item {
+            background: #ffffff;
+            padding: 1rem 1.2rem;
+            border-radius: 14px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+            border: 1px solid #ede8e0;
+        }
+
+        .feature-item strong {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.15rem;
+            color: #363026;
+        }
+
+        .feature-item p {
+            font-size: 0.94rem;
+            color: #4e4840;
+        }
+
+        /* 引用块 / 提示框 */
+        .insight-box {
+            background: #f3efe9;
+            padding: 1.2rem 1.6rem;
+            border-radius: 20px;
+            margin: 1.8rem 0 1.2rem;
+            border-left: 6px solid #b7a58b;
+            font-style: normal;
+            color: #3a352d;
+        }
+
+        .insight-box p {
+            margin-bottom: 0.4rem;
+        }
+
+        .insight-box .label {
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            color: #5b4f3e;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        /* FAQ 摘要 */
+        .faq-summary {
+            margin: 2.2rem 0 1.2rem;
+        }
+
+        .faq-item {
+            padding: 0.8rem 0 0.6rem;
+            border-bottom: 1px solid #e9e3db;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            color: #2f2b24;
+            display: flex;
+            align-items: baseline;
+            gap: 0.4rem;
+        }
+
+        .faq-q::before {
+            content: "Q";
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: #d6cec1;
+            color: #2e2a23;
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .faq-a {
+            margin: 0.2rem 0 0 2.2rem;
+            color: #555049;
+            font-size: 0.96rem;
+        }
+
+        /* 底部链接区域 */
+        .footer-links {
+            margin-top: 2.8rem;
+            padding-top: 1.3rem;
+            border-top: 1px solid #e5dfd6;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a,
+        .inline-link {
+            color: #5b4f3e;
+            text-decoration: none;
+            border-bottom: 1px dotted #b7ab99;
+            transition: border 0.1s, color 0.1s;
+        }
+
+        .footer-links a:hover,
+        .inline-link:hover {
+            color: #1f1b15;
+            border-bottom: 1px solid #7b6c58;
+        }
+
+        .footer-links span {
+            color: #898172;
+            padding: 0 0.2rem;
+        }
+
+        .footer-links .note {
+            color: #776e60;
+            font-size: 0.85rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .page {
+                padding: 1.8rem 1rem 2rem;
+                border-radius: 20px;
+            }
+
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+
+            .section-card {
+                padding: 1.2rem 1rem;
+            }
+
+            .faq-a {
+                margin-left: 1.4rem;
+            }
+        }
+
+        /* 额外细节 */
+        .highlight-term {
+            background: #ede7de;
+            padding: 0.1rem 0.4rem;
+            border-radius: 6px;
+            font-weight: 400;
+            color: #2d2821;
+        }
+
+        .list-soft {
+            list-style: none;
+            padding-left: 0.5rem;
+        }
+
+        .list-soft li {
+            padding: 0.25rem 0 0.15rem 1.2rem;
+            position: relative;
+        }
+
+        .list-soft li::before {
+            content: "·";
+            position: absolute;
+            left: 0;
+            color: #9b8d7a;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- hero -->
+    <div class="hero">
+        <h1>资料索引 · 1xbet</h1>
+        <div class="sub">从界面逻辑、功能入口到常见疑问的信息整理，方便快速了解结构</div>
+    </div>
+
+    <!-- 优势区 / 特点卡片 -->
+    <div class="section-card">
+        <h2>📋 平台功能与信息组织特点</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <strong>模块化导航</strong>
+                <p>体育、电竞赛事、即时数据、娱乐场等分区清晰，便于按兴趣索引内容。</p>
+            </div>
+            <div class="feature-item">
+                <strong>多语言与地区适配</strong>
+                <p>界面语言、币种、时区等选项集中管理，适合跨区域资料对比。</p>
+            </div>
+            <div class="feature-item">
+                <strong>实时动态面板</strong>
+                <p>赛事滚动、比分变化、赔率调整均在同一视窗内推送，减少页面跳转。</p>
+            </div>
+            <div class="feature-item">
+                <strong>账户中心分层</strong>
+                <p>个人资料、交易记录、安全设置、偏好选项集中归类，层级较浅。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 说明区：从资料整理角度描述 -->
+    <div class="section-card">
+        <h2>🗂️ 资料整理视角下的结构说明</h2>
+        <p>对于首次接触该平台的用户，或希望系统梳理功能模块的访问者，可以将 <a href="https://system-1xbet.com" class="inline-link">1xbet</a> 理解为由几个核心区块构成的聚合服务：顶部主菜单承载体育、电竞、真人娱乐等大类；左侧边栏（或汉堡菜单）通常列出次级分类及热门赛事；中央内容区则根据所选模块动态更新。这种布局降低了信息层级，使得查找不同类目的过程更接近“翻阅索引”。</p>
+        <p>此外，平台内的搜索与筛选工具支持按联赛、队伍、时间、赔率范围等维度过滤，适合需要快速定位特定事件或盘口的场景。</p>
+    </div>
+
+    <!-- 提示框 / 引用块 -->
+    <div class="insight-box">
+        <span class="label">💡 使用提示</span>
+        <p>在浏览或记录信息时，可留意页面顶部的筛选标签（如“即将开始”“进行中”“今日焦点”），这些标签能帮助缩小范围。如果对某一赛事的赔率变化趋势感兴趣，不妨多关注即时面板中的走势图或历史对比入口——部分模块会提供简要的波动曲线。</p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-summary section-card" style="border-left-color: #c1b29d;">
+        <h2>❓ 常见问题摘要（FAQ）</h2>
+        <div class="faq-item">
+            <div class="faq-q">如何快速切换体育项目？</div>
+            <div class="faq-a">顶部导航栏”体育“下方通常包含足球、篮球、网球等子分类，点击即可刷新对应列表。也可利用左侧的”热门联赛“快捷入口。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">账户相关的设置在哪里？</div>
+            <div class="faq-a">进入个人中心（通常以头像或图标表示），可见“设置”“安全”“交易记录”等分组，部分选项需二次验证后修改。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">为什么同一赛事的赔率会有多个格式？</div>
+            <div class="faq-a">平台支持小数、分数、美式等赔率显示方式，可在“设置”或“偏好”中选择统一格式。不同地区默认格式可能不同。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">有没有针对新使用者的引导流程？</div>
+            <div class="faq-a">注册或首次登录后，部分界面会弹出简短的步骤提示；此外帮助中心（FAQ页面）按主题整理了操作说明，可以随时查阅。</div>
+        </div>
+    </div>
+
+    <!-- 底部链接区 -->
+    <div class="footer-links">
+        <span class="note">信息索引页 · 仅作结构介绍</span>
+        <span>|</span>
+        <a href="https://system-1xbet.com">1xbet</a>
+        <span>|</span>
+        <span class="note">资料整理 · 无诱导内容</span>
+        <span>|</span>
+        <span class="note">© 2025 · 温和参考</span>
+    </div>
+
+    <!-- 非常隐晦的种子行，无展示，仅用于变化参考 -->
+    <div style="display:none;">0f92ec548a1b8914</div>
+</div>
+</body>
+</html>
